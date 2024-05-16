@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './navtop.component.css'
 })
 export class NavtopComponent {
+isOpen: any;
 
 }

@@ -4,24 +4,31 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { YourService } from './your-service.service'; // import YourService
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavtopComponent } from './navtop/navtop.component';
 import { TableComponent } from './table/table.component';
 import { TextinputComponent } from './textinput/textinput.component';
+import { OopComponent } from './oop/oop.component';
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { HeroFormTemplateComponent } from './hero-form-template/hero-form-template.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavtopComponent,
-    TableComponent,
-    TextinputComponent
+      AppComponent,
+      NavtopComponent,
+      TableComponent,
+      TextinputComponent,
+      OopComponent,
+      HeroFormTemplateComponent,
   ],
+  providers: [YourService],
+  bootstrap: [AppComponent],
   imports: [
-    BrowserModule,
-    HttpClientModule, FormsModule
-
-  ],
-  providers: [YourService], // เพิ่ม YourService เข้าไปใน providers
-  bootstrap: [AppComponent]
+      BrowserModule,
+      HttpClientModule, FormsModule, ReactiveFormsModule,
+      NameEditorComponent,
+      ProfileEditorComponent
+  ]
 })
 export class AppModule { }

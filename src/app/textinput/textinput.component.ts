@@ -2,13 +2,17 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
+  
   selector: 'app-textinput',
   templateUrl: './textinput.component.html',
   styleUrls: ['./textinput.component.css']
+
 })
 export class TextinputComponent {
 
-  firstName: string = '';
+  firstName: any;
+  lastName: any;
+  nikeName: any;
   // Add other form field variables here
 
   constructor() { }
